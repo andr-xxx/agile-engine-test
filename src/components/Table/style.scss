@@ -1,0 +1,18 @@
+.table-component {
+	margin-bottom: 15px;
+	table {
+		border-collapse: collapse;
+
+		th, td {
+			box-sizing: border-box;
+			border: 1px solid #000;
+			border-collapse: collapse;
+			padding: 10px 25px 10px 10px;
+			position: relative;
+		}
+
+		th {
+			background: url('../../assets/images/sort-arrows-couple-pointing-up-and-down.png') no-repeat 95%;
+		}
+	}
+}

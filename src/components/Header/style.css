@@ -1,0 +1,9 @@
+.header {
+  background: #4399ff;
+  padding: 50px 0; }
+  .header img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    max-height: 300px;
+    max-width: 700px; }
