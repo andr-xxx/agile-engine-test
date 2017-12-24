@@ -11,10 +11,7 @@ class CsvLayoutContainer extends Component {
   constructor() {
     super();
     this.state = {
-      csv: `number,stringm,date
-      25,"test,tests2",24 Dec 1800
-      24,someOne"else,13 Dec 1790
-      907, ,25 Jan 1991`,
+      csv: `number,string,date\n25,"test,tests2",24 Dec 1800\n24,someOne"else,13 Dec 1790\n907, ,25 Jan 1991`,
       isButtonClicked: false
     };
   }
@@ -30,15 +27,14 @@ class CsvLayoutContainer extends Component {
     });
 
     if (this.state.isButtonClicked) {
-      setTimeout( () => {
-        this.props.actions.parseCsvAsync(this.state.csv);
-      }, 0)
+      this.props.actions.parseCsvAsync(event.target.value);
     }
   }
 
   reset() {
     this.setState({
-      isButtonClicked: false
+      isButtonClicked: false,
+      csv: ''
     });
 
     this.props.actions.resetChanges();
@@ -59,6 +55,8 @@ class CsvLayoutContainer extends Component {
   }
 }
 
-export default connect(() => {return {}}, (dispatch) => {
+export default connect(() => {
+  return {}
+}, (dispatch) => {
   return {actions: bindActionCreators(parseCsv, dispatch)};
 })(CsvLayoutContainer);

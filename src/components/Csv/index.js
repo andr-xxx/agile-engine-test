@@ -6,7 +6,7 @@ export const CsvComponent = ({onCsvChange, parseCsv, isButtonClicked, defaultVal
   <div className='csv-input'>
     <h2>CSV</h2>
     <textarea onChange={onCsvChange}
-              defaultValue={defaultValue}
+              value={defaultValue}
               name="csv" id="csv" cols="30" rows="10">
     </textarea>
     <div className='button-bar'>
