@@ -16,5 +16,7 @@
   padding: 10px 25px;
   font-size: 16px;
   border: 0; }
+  .csv-input .btn:hover {
+    opacity: 0.8; }
   .csv-input .btn-reset {
     background: #58d8d9; }
