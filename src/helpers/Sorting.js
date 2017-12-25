@@ -41,7 +41,7 @@ export default class Sorting {
     this.incomeTableBody = incomeArray.slice(1);
     this.column = column;
     this.inOrder = inOrder;
-    if (this.isIncomeNumber()) {
+    if (this.isIncomeNumber()) { // ignore timestamp
       this.sortByNumber();
     } else if (this.isIncomeDate()) {
       this.sortByDate()
